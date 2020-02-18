@@ -1,4 +1,4 @@
-import { GetTasksHandler } from './get-tasks.handler'
-import { GetAgentsHandler } from './get-agents.handler'
+import { GetTasksHandler } from './get-tasks.handlers'
+import { GetAgentsHandler } from './get-agents.handlers'
 
 export const QueryHandlers = [GetTasksHandler, GetAgentsHandler]

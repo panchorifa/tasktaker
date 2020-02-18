@@ -3,7 +3,7 @@ import { Task } from '../models/task.model';
 
 @Injectable()
 export class TaskRepository {
-  async findOneById(id: number): Promise<Task> {
+  async findById(id: number): Promise<Task> {
     return null;
   }
 

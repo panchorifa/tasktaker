@@ -1,11 +1,11 @@
 import { CommandHandler, EventPublisher, ICommandHandler } from '@nestjs/cqrs';
-import { TaskRepository } from '../../repository/task.repository';
+import { TaskRepository } from '../../repositories/task.repository';
 import { CompleteTaskCommand } from '../impl/complete-task.command';
 
 @CommandHandler(CompleteTaskCommand)
 export class CompleteTaskHandler implements ICommandHandler<CompleteTaskCommand> {
   constructor(
-    private readonly taskRepository: taskRepository,
+    private readonly taskRepository: TaskRepository,
     private readonly publisher: EventPublisher,
   ) {}
 

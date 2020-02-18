@@ -8,6 +8,6 @@ export class Task extends AggregateRoot {
     super()
   }
 
-  complete() {    
+  complete() {
   }
 }
