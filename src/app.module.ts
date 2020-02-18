@@ -19,11 +19,5 @@ import { QueryHandlers } from './queries/handlers';
     ...EventHandlers,
     ...QueryHandlers,
   ]
-  // exports: [
-  //   CqrsModule,
-  //   ...CommandHandlers,
-  //   ...EventHandlers,
-  //   ...QueryHandlers
-  // ],
 })
 export class AppModule {}
