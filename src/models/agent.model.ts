@@ -3,14 +3,14 @@ import { AggregateRoot } from '@nestjs/cqrs';
 export class Agent extends AggregateRoot {
   constructor(
     private readonly id: number,
-    private readonly name: string,
-    private readonly skills: string[],
+    // private readonly name: string,
+    // private readonly skills: string[],
     ) {
     super()
   }
 
-  addTask(taskId: number) {
-  }
+  // addTask(taskId: number) {
+  // }
 
 }
 

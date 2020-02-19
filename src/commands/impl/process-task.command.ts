@@ -1,6 +1,6 @@
 export class ProcessTaskCommand {
   constructor(
-    public readonly priority: number,
+    public readonly priority: string,
     public readonly skills: string[]
   ) {}
 }

@@ -1,10 +1,7 @@
-ARG node_version
+ARG node_version | 12
 FROM node:$node_version
 
 WORKDIR /usr/app
-
-RUN rm -rf ~/db
-RUN mkdir -p ~/db
 
 COPY package.json .
 COPY package-lock.json .

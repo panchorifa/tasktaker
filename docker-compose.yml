@@ -2,25 +2,30 @@ version: '3.1'
 
 services:
   postgres:
+    container_name: pg
     image: postgres:11.2
     restart: always
     environment:
       POSTGRES_PASSWORD: ${PG_PASS}
     volumes:
-      - ./db:/var/lib/postgresql/data
+      # - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./pgdata:/var/lib/postgresql/data
     ports:
       - ${PG_PORT}:5432
   adminer:
+    container_name: adminer
     image: adminer
     restart: always
     ports:
       - 8080:8080
   apitest:
+    container_name: api
     build: .
     volumes:
       - ./src:/usr/app/src
       - ./test:/usr/app/test
     depends_on:
       - postgres
+      - adminer
     environment:
       TEST_PG_URL: postgres://postgres:${PG_PASS}@postgres:5432

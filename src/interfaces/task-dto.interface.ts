@@ -1,4 +1,4 @@
 export interface TaskDto {
-  priority: number;
+  priority: string;
   skills: string[];
 }

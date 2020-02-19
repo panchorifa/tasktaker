@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppController (e2e) /agents (GET) 1`] = `
+Array [
+  Object {
+    "id": 1,
+    "name": "one",
+    "skills": Array [
+      "skill1",
+    ],
+  },
+  Object {
+    "id": 2,
+    "name": "two",
+    "skills": Array [
+      "skill1",
+      "skill2",
+    ],
+  },
+  Object {
+    "id": 3,
+    "name": "three",
+    "skills": Array [
+      "skill1",
+      "skill2",
+      "skill3",
+    ],
+  },
+]
+`;
